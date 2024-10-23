@@ -2,7 +2,7 @@
 
 Clone o repositório usando
 ```bash
-https://github.com/joaoPAndrade/produto-api.git
+git clone https://github.com/joaoPAndrade/produto-api.git
 ```
 
 baixe as dependencias usando o comando 
