@@ -27,12 +27,12 @@ popule o banco de dados usando
 
 crie um .env na raiz do projeto com as variáveis
 ```bash
-    APP_PORT=8000
-    DB_USER=root
-    DB_HOST=localhost
-    DB_DATABASE=produto
-    DB_PASSWORD=123
-    DB_PORT=5433
+    APP_PORT=
+    DB_USER=
+    DB_HOST=
+    DB_DATABASE=
+    DB_PASSWORD=
+    DB_PORT=
 ```
 execute a api usando
 ```bash
