@@ -1,0 +1,22 @@
+{
+  "name": "produto-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module", 
+  "scripts": {
+    "build": "npx tsc",
+    "start:prod": "node ./dist/main.js",
+    "start:dev": "node ./src/main.js",
+    "create:db": "docker run -d --name produto -p 5433:5432 -e POSTGRES_USER=root -e POSTGRES_PASSWORD=123  -e POSTGRES_DB=produto postgres:13.5",
+    "migration": "node ./src/infrastructure/database/migrations/initDB.js",
+    "seed": "node ./src/infrastructure/database/seed/seed.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "express": "^4.21.1",
+    "pg": "^8.13.0"
+  }
+}
