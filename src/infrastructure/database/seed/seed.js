@@ -16,7 +16,7 @@ async function populaDB() {
 
     try {
         await dbPool.query(`
-            INSERT INTO produto (descricao, preco, estoque) VALUES
+            INSERT INTO produto (Descricao, Preco, Estoque) VALUES
             ('Produto A', 19.99, 50),
             ('Produto B', 29.99, 30),
             ('Produto C', 9.99, 100),

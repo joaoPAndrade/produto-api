@@ -37,10 +37,10 @@ async function createDatabaseAndTable() {
         await dbPool.query(`
             CREATE TABLE IF NOT EXISTS produto (
                 id SERIAL PRIMARY KEY,
-                descricao VARCHAR(255),
-                preco NUMERIC(10, 2),
-                estoque INTEGER,
-                data TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+                Descricao VARCHAR(255),
+                Preco NUMERIC(10, 2),
+                Estoque INTEGER,
+                Data TIMESTAMP DEFAULT CURRENT_TIMESTAMP
             )
         `);
 
