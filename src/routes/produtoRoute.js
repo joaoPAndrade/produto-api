@@ -17,22 +17,22 @@ const produtoGetByID = new GetById(produtoRepository);
 const produtoGetAll = new GetAll(produtoRepository);
 
 
-Produto.post('/', resolveController(async (req, res) => {
+Produto.post('/produto', resolveController(async (req, res) => {
     return await produtoCreate.handle(req, res);
 }));
 
-Produto.delete('/:id', resolveController(async (req, res) => {
+Produto.delete('/produto/:id', resolveController(async (req, res) => {
     return await produtoDelete.handle(req, res);
 }));
 
-Produto.put('/:id', resolveController(async (req, res) => {
+Produto.put('/produto/:id', resolveController(async (req, res) => {
     return await produtoUpdate.handle(req, res);
 }));
 
-Produto.get('/:id', resolveController(async (req, res) => {
+Produto.get('/produto/:id', resolveController(async (req, res) => {
     return await produtoGetByID.handle(req, res);
 }));
 
-Produto.get('/', resolveController(async (req, res) => {
+Produto.get('/produtos', resolveController(async (req, res) => {
     return await produtoGetAll.handle(req, res);
 }));

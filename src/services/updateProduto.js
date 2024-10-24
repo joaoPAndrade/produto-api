@@ -7,6 +7,7 @@ export class UpdateService{
     async execute(id, {ID, Descricao, Preco, Estoque, Data}){
         const produtoEstadoAtual = await this.produtoRepository.getOneById(id);
         if(!produtoEstadoAtual) throw new Error("Produto não encontrado");
+
         const produto = new Produto({
             ID: id,
             Descricao: Descricao || produtoEstadoAtual.Descricao,
