@@ -6,7 +6,7 @@ export class Produto{
     Data;
 
     constructor(props) {
-        this.ID = props.ID || null; // ID pode ser nulo até ser gerado pelo banco
+        this.ID = props.ID || null;
         this.Descricao = props.Descricao;
         this.Preco = props.Preco;
         this.Estoque = props.Estoque;
