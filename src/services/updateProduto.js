@@ -4,16 +4,16 @@ export class UpdateService{
     constructor(produtoRepo){
         this.produtoRepository = produtoRepo;
     };
-    async execute(id, {ID, Descricao, Preco, Estoque, Data}){
+    async execute(id, {_id, descricao, preco, estoque, data}){
         const produtoEstadoAtual = await this.produtoRepository.getOneById(id);
         if(!produtoEstadoAtual) throw new Error("Produto não encontrado");
 
         const produto = new Produto({
-            ID: id,
-            Descricao: Descricao || produtoEstadoAtual.Descricao,
-            Preco: Preco || produtoEstadoAtual.Preco,
-            Estoque: Estoque || produtoEstadoAtual.Estoque,
-            Data: Data || produtoEstadoAtual.Data,
+            id: id,
+            descricao: descricao || produtoEstadoAtual.descricao,
+            preco: preco || produtoEstadoAtual.preco,
+            estoque: estoque || produtoEstadoAtual.estoque,
+            data: data || produtoEstadoAtual.data,
         })
         const resposta = await this.produtoRepository.update(produto.toJSON());
         return resposta;

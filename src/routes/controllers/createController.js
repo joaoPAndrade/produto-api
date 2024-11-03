@@ -6,8 +6,8 @@ export class Create{
         this.createService = new CreateService(props);
     }
     async handle(req, res){
-        const{Descricao, Preco, Estoque} = req.body;
-        const novoProduto = await this.createService.execute(Descricao, Preco, Estoque)
+        const{descricao, preco, estoque, data} = req.body;
+        const novoProduto = await this.createService.execute(descricao, preco, estoque, data)
         return res.status(201).json(novoProduto);
     }
 }

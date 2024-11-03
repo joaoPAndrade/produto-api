@@ -1,25 +1,25 @@
 export class Produto{
-    ID;
-    Descricao;
-    Preco;
-    Estoque;
-    Data;
+    id;
+    descricao;
+    preco;
+    estoque;
+    data;
 
     constructor(props) {
-        this.ID = props.ID || null;
-        this.Descricao = props.Descricao;
-        this.Preco = props.Preco;
-        this.Estoque = props.Estoque;
-        this.Data = props.Data || new Date(); 
+        this.id = props.id || null;
+        this.descricao = props.descricao;
+        this.preco = props.preco;
+        this.estoque = props.estoque;
+        this.data = props.data || new Date(); 
     }
 
     toJSON(){
         return{
-            ID: this.ID,
-            Descricao: this.Descricao,
-            Preco: this.Preco,
-            Estoque: this.Estoque,
-            Data: this.Data
+            id: this.id,
+            descricao: this.descricao,
+            preco: this.preco,
+            estoque: this.estoque,
+            data: this.data
         }
     }
 }
