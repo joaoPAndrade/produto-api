@@ -59,6 +59,15 @@ Este projeto fornece uma API para gerenciar produtos, incluindo criação, atual
    DB_PASSWORD=           # Senha do banco de dados
    DB_PORT=               # Porta do banco de dados (ex.: 5432)
    ```
+   caso inicie um docker usando o script disponibilizado utilize este `.env`:
+   ```env
+   APP_PORT=8000
+   DB_USER=root
+   DB_HOST=localhost
+   DB_DATABASE=produto
+   DB_PASSWORD=123
+   DB_PORT=5433
+   ```
 
 7. **Inicie a API em modo de desenvolvimento**:
 
